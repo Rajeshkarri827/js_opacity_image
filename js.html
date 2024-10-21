@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Events and Style Manipulation</title>
+</head>
+<body>
+  <p id="text-element">Click the buttons to change this text and style!</p>
+
+  <div id="button-container">
+    <button onclick="changeText('You clicked the first button!', 'red')">Click Me 1</button>
+    <button onclick="changeText('You clicked the second button!', 'green')">Click Me 2</button>
+  </div><br><br>
+
+    <img id="image" src="WhatsApp Image 2024-10-21 at 15.46.09_21a7b731.jpg" alt="Example Image" style="width: 300px; height: auto;">
+
+    <div id="opacity-buttons">
+      <button onclick="changeOpacity(0)">Button1</button>
+      <button onclick="changeOpacity(0.1)">Button2</button>
+      <button onclick="changeOpacity(0.2)">Button3</button>
+      <button onclick="changeOpacity(0.3)">Button4</button>
+      <button onclick="changeOpacity(0.4)">Button5</button>
+      <button onclick="changeOpacity(0.5)">Button6</button>
+      <button onclick="changeOpacity(0.6)">Button7</button>
+      <button onclick="changeOpacity(0.7)">Button8</button>
+      <button onclick="changeOpacity(0.8)">Button9</button>
+      <button onclick="changeOpacity(0.9)">Button10</button>
+    </div>
+
+  <script>
+    function changeText(newText, color) {
+      let textElement = document.getElementById('text-element');
+      textElement.textContent = newText;
+      textElement.style.color = color; 
+      textElement.style.fontSize = '25px'; 
+      textElement.style.margin = '20px'; 
+    }
+
+    function changeOpacity(opacityValue) {
+      let imageElement = document.getElementById('image');
+      imageElement.style.opacity = opacityValue;
+    }
+  </script>
+
+</body>
+</html>
